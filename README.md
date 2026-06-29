@@ -369,11 +369,3 @@ Your submission will be assessed on:
 - [ISO 8601 Dates](https://en.wikipedia.org/wiki/ISO_8601)
 
 ---
-
-## Next Steps
-
-1. ✓ **Phase A (Complete)**: Review [schema/invoice_schema.md](schema/invoice_schema.md) and [schema/po_schema.md](schema/po_schema.md)
-2. **Phase B (Start Now)**: Begin curating 80 training examples using the datasets listed above
-3. Follow remaining phases sequentially
-
-Good luck! This task mirrors real enterprise challenges in document automation.
