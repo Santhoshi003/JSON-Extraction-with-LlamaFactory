@@ -1,0 +1,10 @@
+document,prompt_version,is_valid_json,has_all_required_keys,value_accuracy,notes
+doc_A,baseline,False,False,0.40,"Code fences wrapped JSON; missing total"
+doc_A,v2_fewshot,True,True,0.75,"Improved with examples; minor value error"
+doc_A,v3_strict,True,True,0.80,"Best result; explicit no-markdown worked"
+doc_B,baseline,False,False,0.20,"Prose preamble; wrong schema keys"
+doc_B,v2_fewshot,False,False,0.30,"Marginal improvement; still garbled"
+doc_B,v3_strict,True,False,0.60,"Valid JSON but missing critical fields"
+doc_C,baseline,True,False,0.50,"Valid but incomplete; missing line_items array"
+doc_C,v2_fewshot,True,True,0.85,"Few-shot examples helped here; strong result"
+doc_C,v3_strict,True,True,0.90,"Marginal improvement over v2"

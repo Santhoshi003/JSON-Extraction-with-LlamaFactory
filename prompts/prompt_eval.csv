@@ -1,0 +1,13 @@
+document,prompt_version,prompt_strategy,parse_success,all_fields_correct,schema_compliance,accuracy_score,notes
+INV-003,v1,Baseline,False,False,False,0.0,Prose response - complete failure
+INV-003,v2,Explicit format,True,False,True,0.625,"Valid JSON but only 2/5 items extracted"
+INV-003,v3,Few-shot examples,True,True,True,1.0,Perfect - examples helped significantly
+INV-003,v4,Constraints,True,True,True,1.0,Perfect - constraints enforced completeness
+INV-009,v1,Baseline,False,False,False,0.0,Code fence wrapped - unusable
+INV-009,v2,Explicit format,True,False,True,0.75,Valid JSON but 6/8 fields
+INV-009,v3,Few-shot examples,True,False,True,0.875,Valid JSON with 7/8 fields
+INV-009,v4,Constraints,True,False,True,0.875,Consistent performance - 7/8 fields
+PO-005,v1,Baseline,False,False,False,0.0,Prose response - no JSON attempted
+PO-005,v2,Explicit format,False,False,False,0.0,Still returns prose despite instruction
+PO-005,v3,Few-shot examples,True,False,True,0.857,Valid JSON but supplier truncated 6/7
+PO-005,v4,Constraints,True,False,True,0.857,Valid JSON but same truncation 6/7

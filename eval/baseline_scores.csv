@@ -1,0 +1,32 @@
+document,document_type,is_valid_json,has_correct_schema,fields_complete,accuracy_score,parse_success,notes
+TEST-INV-001,Invoice,False,False,0.375,3/8,False,Code fence wrapped; missing tax field
+TEST-INV-002,Invoice,True,True,0.875,7/8,True,Correct; minor field type
+TEST-INV-003,Invoice,False,False,0.25,2/8,False,Prose response; no JSON attempt
+TEST-INV-004,Invoice,False,False,0.625,5/8,False,Malformed JSON; trailing comma
+TEST-INV-005,Invoice,True,True,0.75,6/8,True,Valid; tax calculation error
+TEST-INV-006,Invoice,False,False,0.5,4/8,False,Code fence; null mishandled
+TEST-INV-007,Invoice,True,True,0.875,7/8,True,Correct receipt-style
+TEST-INV-008,Invoice,False,False,0.375,3/8,False,JSON + commentary wrapper
+TEST-INV-009,Invoice,False,False,0.25,2/8,False,Prose list; no JSON
+TEST-INV-010,Invoice,True,True,1.0,8/8,True,Perfect extraction
+TEST-PO-001,PO,True,True,0.857,6/7,True,Valid; missing supplier details
+TEST-PO-002,PO,False,False,0.571,4/7,False,Code fence; items array malformed
+TEST-PO-003,PO,False,False,0.429,3/7,False,Incomplete JSON; items incomplete
+TEST-PO-004,PO,True,True,0.857,6/7,True,Valid; minor date format
+TEST-PO-005,PO,False,False,0.286,2/7,False,Prose; no JSON attempt
+TEST-PO-006,PO,True,True,1.0,7/7,True,Perfect extraction
+TEST-PO-007,PO,False,False,0.571,4/7,False,Items array malformed
+TEST-PO-008,PO,True,True,0.857,6/7,True,Correct
+TEST-PO-009,PO,False,False,0.429,3/7,False,Currency handling broken
+TEST-PO-010,PO,True,True,1.0,7/7,True,Correct extraction
+doc_10.txt,"Based on the document:\n{""vendor""",False,False,0.60,0.40,"Prose wrapper; missing keys"
+doc_11.txt,"{""supplier"": ""Corp X"", ""buyer"":",True,True,1.00,1.00,"Perfect extraction"
+doc_12.txt,"```json\n{""vendor"": ""Acme""",False,False,0.50,0.30,"Code fenced; wrong schema keys"
+doc_13.txt,"{""vendor"": ""Supplier A"", ""invoice",True,True,1.00,0.95,"Clean; minor value drift"
+doc_14.txt,"I found the following information: {",False,False,0.40,0.20,"Prose; severely malformed JSON"
+doc_15.txt,"{""buyer"": ""OrgA"", ""supplier"": "",True,True,1.00,1.00,"Perfect PO extraction"
+doc_16.txt,"{""vendor"": ""Corp B"", ""invoice_n",True,False,0.80,0.70,"Missing required date field"
+doc_17.txt,"Error: Could not parse invoice","False,False,0.00,0.00,"Model failure; no JSON output"
+doc_18.txt,"{""vendor"": ""VendorC"", ""invoice_n",True,True,0.90,0.80,"Valid; value misparse on total"
+doc_19.txt,"Based on analysis:\n{""vendor"": ""X",False,False,0.50,0.30,"Prose wrapper; incomplete"
+doc_20.txt,"{""vendor"": ""Final Inc"", ""invoice_n",True,True,1.00,0.95,"Clean response; all fields present"

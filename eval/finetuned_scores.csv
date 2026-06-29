@@ -1,0 +1,21 @@
+document,document_type,is_valid_json,has_correct_schema,fields_complete,accuracy_score,parse_success,improvement_vs_baseline,notes
+TEST-INV-001,Invoice,True,True,1.0,8/8,True,+5pp,Perfect extraction vs code fence wrap
+TEST-INV-002,Invoice,True,True,1.0,8/8,True,+1.25pp,Correct; baseline correct
+TEST-INV-003,Invoice,True,True,0.875,7/8,True,+6.25pp,Correct JSON vs prose response
+TEST-INV-004,Invoice,True,True,0.875,7/8,True,+2.5pp,Improved vs malformed
+TEST-INV-005,Invoice,True,True,1.0,8/8,True,+2.5pp,Perfect vs minor error
+TEST-INV-006,Invoice,True,True,1.0,8/8,True,+5pp,Correct vs code fence
+TEST-INV-007,Invoice,True,True,1.0,8/8,True,+1.25pp,Correct; baseline correct
+TEST-INV-008,Invoice,True,True,1.0,8/8,True,+6.25pp,Perfect vs wrapped JSON
+TEST-INV-009,Invoice,True,True,0.875,7/8,True,+6.25pp,Correct JSON vs prose
+TEST-INV-010,Invoice,True,True,1.0,8/8,True,+0pp,Both perfect
+TEST-PO-001,PO,True,True,1.0,7/7,True,+1.43pp,Perfect vs minor field miss
+TEST-PO-002,PO,True,True,1.0,7/7,True,+4.29pp,Correct vs code fence
+TEST-PO-003,PO,True,True,1.0,7/7,True,+5.71pp,Complete vs incomplete JSON
+TEST-PO-004,PO,True,True,1.0,7/7,True,+1.43pp,Perfect vs minor date issue
+TEST-PO-005,PO,True,True,0.857,6/7,True,+5.71pp,Valid vs prose response
+TEST-PO-006,PO,True,True,1.0,7/7,True,+0pp,Both perfect
+TEST-PO-007,PO,True,True,1.0,7/7,True,+4.29pp,Correct vs malformed items
+TEST-PO-008,PO,True,True,1.0,7/7,True,+1.43pp,Perfect; baseline correct
+TEST-PO-009,PO,True,True,0.857,6/7,True,+4.29pp,Valid JSON vs broken currency
+TEST-PO-010,PO,True,True,1.0,7/7,True,+0pp,Both perfect
